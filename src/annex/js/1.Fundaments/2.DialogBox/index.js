@@ -4,6 +4,11 @@ import bananaImg from './banana.svg'
 import orangeImg from './naranja.svg'
 import appleImg from './manzana.svg'
 
+export const dialogBox = {
+    name: 'dialogBox',
+    parent: 'fundaments'
+}
+
 const cart = {
     apple: {
         name: 'apple',

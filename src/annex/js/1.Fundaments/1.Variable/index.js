@@ -2,6 +2,11 @@ import {useState, memo} from 'react'
 import Form from 'react-bootstrap/Form'
 import {Accordion, Card, Button, Col} from 'react-bootstrap'
 
+export const variable = {
+    name: 'variable',
+    parent: 'fundaments'
+}
+
 const Variable = memo(() => {
     const [age, setAge] = useState(0)
 
