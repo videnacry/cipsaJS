@@ -14,14 +14,17 @@ export const fundaments = {
     }
 }
 
-const topics = {variable: <Variable />, dialogBox: <DialogBox />}
+const topics = {variable: Variable, dialogBox: DialogBox}
 
-const Fundaments = memo(() => {
+const Fundaments = memo(({Folder}) => {
     const topic = useSelector(selectTopic)
     const render = useCallback(() => {
-        if (topic) return topics[topic]
+        if (topic) {
+            const Topic =  topics[topic]
+            return <Topic Folder={Folder}/>
+        }
         return(
-            <h1>Estas rikolino a más no poder</h1>
+            <Folder files={fundaments}/>
         )
     })
     return(

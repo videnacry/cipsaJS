@@ -5,22 +5,24 @@ import Fundaments, {fundaments} from './1.Fundaments'
 
 export const js = {
     name: 'js',
-    parent: 'root',
     children: {
         fundaments
     }
 }
 
 const modules = {
-    fundaments: <Fundaments />
+    fundaments: Fundaments
 }
 
-const Js = memo(() => {
+const Js = memo(({Folder}) => {
     const module = useSelector(selectModule)
     const render = useCallback(() => {
-        if (module) return modules[module]
+        if (module) {
+            const Module =  modules[module]
+            return <Module Folder={Folder}/>
+        }
         return(
-            <h1>Estas bien rikolino</h1>
+            <Folder files={js}/>
         )
     }, [module])
     return(

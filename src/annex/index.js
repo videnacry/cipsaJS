@@ -2,6 +2,7 @@ import {memo, useCallback} from 'react'
 import {useSelector} from 'react-redux'
 import {selectAnnex} from '../features/directory/slice'
 import Js, {js} from './js'
+import Folder from './folder'
 
 export const annex = {
     name: 'annex',
@@ -11,15 +12,18 @@ export const annex = {
 }
 
 const annexes = {
-    js: <Js/>
+    js: Js
 }
 
 const Annex = memo(() => {
     const annex = useSelector(selectAnnex)
     const render = useCallback(() => {
-        if (annex) return annexes[annex]
+        if (annex) {
+            const Dir = annexes[annex]
+            return <Dir Folder={Folder}/>
+        }
         return(
-            <h1>Estas rikolino</h1>
+            <Folder files={annex}/>
         )
     }, [annex])
     return(
