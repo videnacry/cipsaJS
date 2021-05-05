@@ -1,4 +1,4 @@
-import {Button, Accordion} from 'react-bootstrap'
+import {Navbar, Button, Accordion} from 'react-bootstrap'
 import {useDispatch, useSelector} from 'react-redux'
 import {changePath, selectState} from './slice'
 import {annex} from '../../annex'
@@ -36,7 +36,7 @@ const Nav = () => {
                         <Accordion>
                             <dt>
                                 <Accordion.Toggle 
-                                eventKey="0" as={Button} variant="link" 
+                                eventKey="0" as={Button} variant="warning" 
                                 className="text-light font-weight-bold text-decoration-none"
                                 onClick={() => dispatch(changePath(getPathArray(dir)))}
                                 >
@@ -52,7 +52,7 @@ const Nav = () => {
             } else {
                 return(
                     <dd>
-                        <Button variant="link" className="text-light text-decoration-none" 
+                        <Button variant="primary" className="text-light text-decoration-none" 
                         onClick={() => dispatch(changePath(getPathArray(dir)))}
                         >
                             {dir.name}
@@ -63,9 +63,14 @@ const Nav = () => {
         })
     }
     return(
-        <nav>
-            {getDirectoryAsDL(annex)}
-        </nav>
+        <Navbar collapseOnSelect expand="lg">
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" className="bg-danger"/>
+            <Navbar.Collapse id="responsive-navbar-nav">
+                <Navbar>
+                    {getDirectoryAsDL(annex)}
+                </Navbar>
+            </Navbar.Collapse>
+        </Navbar>
     )
 }
 
