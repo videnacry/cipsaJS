@@ -4,6 +4,7 @@ import {selectTopic} from '../../../features/directory/slice'
 import Variable, {variable} from './1.Variable'
 import DialogBox, {dialogBox} from './2.DialogBox'
 import Condition, {condition} from './3.Condition'
+import TernaryOperator, {ternaryOperator} from './4.ternaryOperator'
 
 
 export const fundaments = {
@@ -12,11 +13,12 @@ export const fundaments = {
     children: {
         variable,
         dialogBox,
-        condition
+        condition,
+        ternaryOperator
     }
 }
 
-const topics = {variable: Variable, dialogBox: DialogBox, condition: Condition}
+const topics = {variable: Variable, dialogBox: DialogBox, condition: Condition, ternaryOperator: TernaryOperator}
 
 const Fundaments = memo(({Folder}) => {
     const topic = useSelector(selectTopic)
