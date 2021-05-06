@@ -8,13 +8,15 @@ const roots = {annex: <Annex />}
 
 function App() {
   const root = useSelector(selectRoot)
-  console.log(root)
   return (
-    <Row className="p-4 bg-dark bg-gradient vh-100 overflow-auto">
+    <Row className="p-2 pl-4 p-sm-4 bg-dark bg-gradient vh-100 overflow-auto">
       <Col xs="3" sm="2" lg="3">
+        <br/>
+        <br/>
+        <br/>
       </Col>
-      <Col xs="9" sm="9" lg="7">
-        <Container>
+      <Col xs="12" sm="9" lg="7" className="p-0">
+        <Container className="p-0">
           {roots[root]}
         </Container>
       </Col>

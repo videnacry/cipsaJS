@@ -12,7 +12,7 @@ export const condition = {
 
 const renderExercise = () => exercises.map(Exercise => (
     <>
-    <div className="border border-secondary p-3 rounded bg-secondary">
+    <div className="border border-secondary p-2 p-sm-3 rounded bg-secondary">
         <Alert variant="info">{Exercise.Statement}</Alert>
         <Exercise.default />
     </div>

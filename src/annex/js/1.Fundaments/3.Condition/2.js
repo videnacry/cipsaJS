@@ -63,7 +63,7 @@ const Second = memo(() => {
         <>
         <Form onSubmit={e => e.preventDefault()} className="bg-light p-4 rounded">
             <div className="row">
-                <div className="col pt-3 border-right border-secondary">
+                <div className="col pl-0 pl-sm-2 pt-3 border-right border-secondary">
                     <h1 className="h5 pb-2">Persona a</h1>
                     <Form.Group>
                         <Form.Label htmlFor="a-name">Ingresa un nombre</Form.Label>
@@ -74,7 +74,7 @@ const Second = memo(() => {
                         <Form.Control id="a-age" type="Number" min="1" onChange={e => personsReducer({type: 'setAgeA', person: {age: e.currentTarget.value}})}/>
                     </Form.Group>
                 </div>
-                <div className="col pt-3 border-secondary">
+                <div className="col pr-0 pr-sm-2 pt-3 border-secondary">
                     <h1 className="h5 pb-2">Persona b</h1>
                     <Form.Group>
                         <Form.Label htmlFor="b-name">Ingresa un nombre</Form.Label>
