@@ -2,7 +2,7 @@ import {memo, useCallback, useState, useReducer} from 'react'
 import {Form, Button, Toast} from 'react-bootstrap'
 import maskSVG from './mascara.svg'
 
-export const Statement = <div>{'1. Crea una página que solicite al usuario su nombre. En caso de que el nombre indicado sea "Roger" se mostrará un mensaje dándole la bienvenida. En caso contrario se mostrará el mensaje "Página no disponible".'}</div>
+export const Statement = <div><b>1.</b>{' Crea una página que solicite al usuario su nombre. En caso de que el nombre indicado sea "Roger" se mostrará un mensaje dándole la bienvenida. En caso contrario se mostrará el mensaje "Página no disponible".'}</div>
 
 const toast = {show: false}
 const toastReducer = (state, action) => {

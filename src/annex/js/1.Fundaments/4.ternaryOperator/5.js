@@ -2,7 +2,7 @@ import {memo, useCallback, useReducer} from 'react'
 import {Form, Toast, Button} from 'react-bootstrap'
 import numbersSVG from './numeros.svg'
 
-export const Statement = <p>{'5. Crea una página que solicite al usuario un valor numérico. Si el valor introducido es múltiplo de 2 deberá mostrarse el mensaje "El número es par". En caso contrario deberá mostrarse el mensaje "El número es impar".'}</p>
+export const Statement = <p><b>5.</b>{' Crea una página que solicite al usuario un valor numérico. Si el valor introducido es múltiplo de 2 deberá mostrarse el mensaje "El número es par". En caso contrario deberá mostrarse el mensaje "El número es impar".'}</p>
 
 function getProperty(num = number) {
     if (num === '') {

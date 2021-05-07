@@ -2,7 +2,7 @@ import {memo, useReducer, useCallback} from 'react'
 import {Form, Toast, Button} from 'react-bootstrap'
 import checkSVG from './check-in.svg'
 
-export const Statement = <p>{'2. Crea una página que solicite al usuario un nombre y contraseña. Si el nombre es "Roger" y la contraseña es "CIPSA" se mostrarña un mensaje de bienvenida.'}</p>
+export const Statement = <p><b>2.</b>{' Crea una página que solicite al usuario un nombre y contraseña. Si el nombre es "Roger" y la contraseña es "CIPSA" se mostrarña un mensaje de bienvenida.'}</p>
 
 const credentials = {
     username: 'Roger',

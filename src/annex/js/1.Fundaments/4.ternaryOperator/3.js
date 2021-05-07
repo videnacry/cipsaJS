@@ -1,7 +1,7 @@
 import {memo, useCallback, useReducer} from 'react'
 import {Form, Toast, Button} from 'react-bootstrap'
 import credentialsSVG from './id-card.svg'
-export const Statement = <p>{'3. Si el nombre de usuario es incorrecto se mostrará el mensaje de error "Usuario no reconocido.". Si el nombre de usuario es correcto pero no la contraseña se mostraña el mensaje "Contraseña incorrecta".'}</p>
+export const Statement = <p><b>3.</b>{' Si el nombre de usuario es incorrecto se mostrará el mensaje de error "Usuario no reconocido.". Si el nombre de usuario es correcto pero no la contraseña se mostraña el mensaje "Contraseña incorrecta".'}</p>
 
 function getAffirmation({username, password} = credentials, {username: pUsername, password: pPassword} = userInput) {
     if (username === pUsername) {

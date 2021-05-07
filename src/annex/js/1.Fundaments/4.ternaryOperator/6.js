@@ -4,7 +4,7 @@ import scoreSVG from './exam.svg'
 export const Statement = 
     <dd>
         <dl>
-            <p>{'6. Crea una página que solicite al usuario el número de preguntas existentes en un examen de tipo Test, y cuántas ha acertado. En función de los valores indicados la página deberá calcular la nota obtenida y mostrar la calificación que corresponda en función de los siguientes baremos:'}</p>
+            <p><b>6.</b>{' Crea una página que solicite al usuario el número de preguntas existentes en un examen de tipo Test, y cuántas ha acertado. En función de los valores indicados la página deberá calcular la nota obtenida y mostrar la calificación que corresponda en función de los siguientes baremos:'}</p>
             <li className="list-group pl-4">{'√ Si la nota está entre 0 y 2 -> Muy deficiente'}</li>
             <li className="list-group pl-4">{'√ Si la nota está entre 2 y 5 -> Insuficiente'}</li>
             <li className="list-group pl-4">{'√ Si la nota está entre 5 y 6 -> Suficiente'}</li>

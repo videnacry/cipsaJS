@@ -2,7 +2,7 @@ import {memo, useCallback, useReducer} from 'react'
 import {Form, Toast, Button} from 'react-bootstrap'
 import christmasSVG from './navidad.svg'
 
-export const Statement = <p>{'4. Crea una página que solicite al usuario el nombre del mes y día actual. Si el usuario introduce el día 25 de "diciembre" deberá mostrarse el mensaje "Es Navidad".'}</p>
+export const Statement = <p><b>4.</b>{' Crea una página que solicite al usuario el nombre del mes y día actual. Si el usuario introduce el día 25 de "diciembre" deberá mostrarse el mensaje "Es Navidad".'}</p>
 const toast = {
     show: false,
     greet: ''
