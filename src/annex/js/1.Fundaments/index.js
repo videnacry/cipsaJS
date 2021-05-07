@@ -5,6 +5,7 @@ import Variable, {variable} from './1.Variable'
 import DialogBox, {dialogBox} from './2.DialogBox'
 import Condition, {condition} from './3.Condition'
 import TernaryOperator, {ternaryOperator} from './4.ternaryOperator'
+import SwitchOperator, {switchOperator} from './5.switchOperator'
 
 
 export const fundaments = {
@@ -14,11 +15,12 @@ export const fundaments = {
         variable,
         dialogBox,
         condition,
-        ternaryOperator
+        ternaryOperator,
+        switchOperator
     }
 }
 
-const topics = {variable: Variable, dialogBox: DialogBox, condition: Condition, ternaryOperator: TernaryOperator}
+const topics = {variable: Variable, dialogBox: DialogBox, condition: Condition, ternaryOperator: TernaryOperator, switchOperator: SwitchOperator}
 
 const Fundaments = memo(({Folder}) => {
     const topic = useSelector(selectTopic)
