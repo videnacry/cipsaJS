@@ -6,8 +6,9 @@ import * as Third from './3'
 import * as Fourth from './4'
 import * as Fifth from './5'
 import * as Sixth from './6'
+import * as Seventh from './7'
 
-const exercises = [First, Second, Third, Fourth, Fifth, Sixth]
+const exercises = [First, Second, Third, Fourth, Fifth, Sixth, Seventh]
 
 export const ternaryOperator = {
     name: 'ternaryOperator',
