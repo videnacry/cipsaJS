@@ -6,6 +6,7 @@ import DialogBox, {dialogBox} from './2.DialogBox'
 import Condition, {condition} from './3.Condition'
 import TernaryOperator, {ternaryOperator} from './4.ternaryOperator'
 import SwitchOperator, {switchOperator} from './5.switchOperator'
+import Loop, {loop} from './6.loop'
 
 
 export const fundaments = {
@@ -16,11 +17,19 @@ export const fundaments = {
         dialogBox,
         condition,
         ternaryOperator,
-        switchOperator
+        switchOperator,
+        loop
     }
 }
 
-const topics = {variable: Variable, dialogBox: DialogBox, condition: Condition, ternaryOperator: TernaryOperator, switchOperator: SwitchOperator}
+const topics = {
+    variable: Variable,
+    dialogBox: DialogBox,
+    condition: Condition,
+    ternaryOperator: TernaryOperator,
+    switchOperator: SwitchOperator,
+    loop: Loop
+}
 
 const Fundaments = memo(({Folder}) => {
     const topic = useSelector(selectTopic)

@@ -10,12 +10,10 @@ export const switchOperator = {
 
 const exercises = [First, Second]
 const render = () => exercises.map(Exercise => (
-    <>
-    <div className="p-2 p-sm-3 rounded border border-secondary bg-secondary">
+    <div className="mb-4 p-2 p-sm-3 rounded bg-secondary">
         <Alert variant="info">{Exercise.Statement}</Alert>
         <Exercise.default/>
     </div>
-    </>
 ))
 const SwitchOperator = memo(() => {
     return render()
