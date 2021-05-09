@@ -7,6 +7,7 @@ import Condition, {condition} from './3.Condition'
 import TernaryOperator, {ternaryOperator} from './4.ternaryOperator'
 import SwitchOperator, {switchOperator} from './5.switchOperator'
 import Loop, {loop} from './6.loop'
+import Functions, {functions} from './7.Function'
 
 
 export const fundaments = {
@@ -18,7 +19,8 @@ export const fundaments = {
         condition,
         ternaryOperator,
         switchOperator,
-        loop
+        loop,
+        functions
     }
 }
 
@@ -28,7 +30,8 @@ const topics = {
     condition: Condition,
     ternaryOperator: TernaryOperator,
     switchOperator: SwitchOperator,
-    loop: Loop
+    loop: Loop,
+    functions: Functions
 }
 
 const Fundaments = memo(({Folder}) => {
