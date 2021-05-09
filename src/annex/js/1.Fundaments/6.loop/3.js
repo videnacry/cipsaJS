@@ -9,7 +9,7 @@ const reducer = (state, {type, input}) => {
         case 'reset':  return initialState
         case 'addMore': return {...state, showModal: false}
         case 'showModal': 
-            if (state.validValue) return {...state, showModal: true, input: 0, validValue: false, values: [...state.values, state.input]}
+            if (state.validValue) return {...state, showModal: true, input: '', validValue: false, values: [...state.values, state.input]}
             return {...state, showToast: true}
         case 'changeInput':
             if (input === '' || input === null || typeof input === 'boolean' || isNaN(input)) return {...state, showToast: true, validValue: false, input: input}
@@ -23,7 +23,7 @@ const initialState = {
     media: null,
     values: [],
     validValue: false,
-    input: 0
+    input: ''
 }
 
 const Third = memo(() => {
