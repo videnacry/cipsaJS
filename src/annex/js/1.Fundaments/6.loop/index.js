@@ -1,13 +1,14 @@
 import {memo} from 'react'
 import {Alert} from 'react-bootstrap'
 import * as First from './1'
+import * as Second from './2'
 
 export const loop = {
     name: 'loop',
     parent: 'fundaments'
 }
 
-const exercises = [First]
+const exercises = [First, Second]
 
 const render = (haystack = exercises) => haystack.map(Exercise => (
     <div className="mb-4 p-2 rounded p-sm-3 bg-secondary">
