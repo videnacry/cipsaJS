@@ -3,7 +3,6 @@ import {Col, Form, Toast, Alert, Button, ProgressBar} from 'react-bootstrap'
 export const Statement = <p><b>2.</b>{' Crea una función '}<e>enumerador()</e>{' que reciba como parámetros dos valores y muestre en pantalla los valores comprendidos entre ambos de menor a mayor.'}</p>
 
 const isNum = (num) => {
-    console.log(num)
     if (num === '' || typeof num === 'boolean' || num === null || isNaN(num)) return false
     return true
 }
@@ -59,7 +58,6 @@ const fillProgressBar = async ({num1, num2}, dispatch) => {
     }
     min++
     const difference = max - min
-    console.log(difference)
     if (difference === 0 || num1 == num2) {
         dispatch({type: 'badDifference'})
     } else {
