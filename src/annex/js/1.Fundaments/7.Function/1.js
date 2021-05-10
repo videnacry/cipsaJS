@@ -1,7 +1,7 @@
 import {memo, useReducer, useCallback} from 'react'
 import {Col, Form, Toast, Alert, Button} from 'react-bootstrap'
 
-export const Statement = <p><b>1.</b>{'Crea una función '}<e>esPar()</e>{' que recibe un valor como parámetro y retorna un valor lógico indicando si es o no par.'}</p>
+export const Statement = <p><b>1.</b>{' Crea una función '}<e>esPar()</e>{' que recibe un valor como parámetro y retorna un valor lógico indicando si es o no par.'}</p>
 
 const getResultMessage = ({num}) => <Alert variant="success text-align-center">
         {`Es par = ${num % 2 === 0 ? 'true' : 'false'}`}

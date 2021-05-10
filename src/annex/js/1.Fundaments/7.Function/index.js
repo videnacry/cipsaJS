@@ -1,13 +1,14 @@
 import {memo} from 'react'
 import Alert from 'react-bootstrap/Alert'
 import * as First from './1'
+import * as Second from './2'
 
 export const functions = {
     name: 'functions',
     parent: 'fundaments'
 }
 
-const exercises = [First]
+const exercises = [First, Second]
 const render = () => exercises.map((Exercise, idx) => 
     <div key={`functions-${idx}`} className="mb-4 rounded p-2 p-sm-3 bg-secondary">
         <Alert variant="info">{Exercise.Statement}</Alert>
