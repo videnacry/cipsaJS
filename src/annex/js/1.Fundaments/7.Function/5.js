@@ -1,10 +1,10 @@
 import {memo, useEffect, useReducer, useRef, useCallback} from 'react'
 import {Col, Modal, Form, Alert, Toast, Button} from 'react-bootstrap'
-export const Statement = <p><b>4.</b>{' Crea una función mostrarTabla() que recibe como parámetro un valor y muestra en la tabla la tabla de multiplicar del valor correspondiente empleando '}<e>document.write().</e></p>
+export const Statement = <p><b>5.</b>{' Modifica la gunción del ejercicio anterior de modo que requiera dos parámetros que determinan un rango de valores válidos admitidos. La función solicitará al usuario un valor correcto hasta que introduzca un valor numérico comprendido en el rango indicado.'}</p>
 
 const isNum = (num) => (num === '' || num === null || typeof num === 'boolean' || isNaN(num)) ? false : true
 const changeMultiplier = (state, multiplier) => {
-    const showAlert = !isNum(multiplier)
+    const showAlert = (isNum(multiplier) && multiplier <= 20 && multiplier >= 0) ? false : true
     const validMultiplier = !showAlert
     const submitDisabled = showAlert
     return {...state, multiplier, showAlert, validMultiplier, submitDisabled}
@@ -25,7 +25,7 @@ const initialState = {
     submitDisabled: true
 }
 
-const Fourth = memo(() => {
+const Fifth = memo(() => {
     const [state, dispatch] = useReducer(reducer, initialState)
     const submitHandler = useCallback((e, pState, pDispatch = dispatch) => {
         e.preventDefault()
@@ -38,7 +38,7 @@ const Fourth = memo(() => {
     useEffect(() => {
         if (state.showTable) {
             const multiplicands = [1,2,3,4,5,6,7,8,9,10]
-            const iframe = window.open('', 'fourth-table')
+            const iframe = window.open('', 'fifth-table')
             iframe.document.write(`
             <head>
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
@@ -83,18 +83,18 @@ const Fourth = memo(() => {
         <>
         <Form onSubmit={e => submitHandler(e, state)} className="rounded p-2 p-sm-4 bg-light">
             <Form.Row className="align-items-end">
-                <Form.Group as={Col} controlId="fourth-multiplier">
+                <Form.Group as={Col} controlId="fifth-multiplier">
                     <Toast show={state.showAlert} onClose={() => dispatch({type: 'closeAlert'})}>
                         <Toast.Header>
                             <strong className="mr-auto">Mensaje</strong>
                             <small>Like &#x2661;</small>
                         </Toast.Header>
                         <Toast.Body>
-                            <Alert variant="danger">Ingrese otro valor n&uacute;merico</Alert>
+                            <Alert variant="danger">Ingrese otro valor n&uacute;merico, entre 0 y 20</Alert>
                         </Toast.Body>
                     </Toast>
                     <Form.Label className="text-info">Ingrese un n&uacute;mero</Form.Label>
-                    <Form.Control type="number" onChange={changeHandler}/>
+                    <Form.Control type="number" min={0} max={20} onChange={changeHandler}/>
                 </Form.Group>
                 <Form.Group as={Col}>
                     <Form.Control type="submit" as={Button} variant="primary" disabled={state.submitDisabled}>Enviar</Form.Control>
@@ -106,7 +106,7 @@ const Fourth = memo(() => {
                 <Modal.Title>Tabla del {state.multiplier}</Modal.Title>
             </Modal.Header>
             <Modal.Body className="d-flex justify-content-center">
-                <iframe name="fourth-table" width="80%" className="m-auto rounded" style={{height: '60vh'}}/>
+                <iframe name="fifth-table" width="80%" className="m-auto rounded" style={{height: '60vh'}}/>
             </Modal.Body>
             <Modal.Footer>
             </Modal.Footer>
@@ -115,4 +115,4 @@ const Fourth = memo(() => {
     )
 })
 
-export default Fourth
+export default Fifth
