@@ -3,6 +3,7 @@ import {useSelector} from 'react-redux'
 import {selectAnnex} from '../features/directory/slice'
 import Js, {js} from './js'
 import Folder from './folder'
+import CodeView from './codeView'
 
 export const annex = {
     name: 'annex',
@@ -20,7 +21,7 @@ const Annex = memo(() => {
     const render = useCallback(() => {
         if (annex) {
             const Dir = annexes[annex]
-            return <Dir Folder={Folder}/>
+            return <Dir Folder={Folder} CodeView={CodeView}/>
         }
         return(
             <Folder files={annex}/>

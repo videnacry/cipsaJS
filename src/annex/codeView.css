@@ -1,0 +1,27 @@
+.CodeMirror {
+    height: 65vh;
+}
+
+@media screen and (max-width: 600px) {
+    .code-view-c {
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .code-view-c {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .code-view-c {
+        width: 75%;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .code-view-c {
+        width: 60%;
+    }
+}
