@@ -1,4 +1,4 @@
-export const statement = <p><b>2.</b>{'Crea un tipo de objeto '}<em>ApuestaPrimitiva</em>{' provisto de seis propiedades que representan los valores de una primitiva: v1, v2, v3, v4, v5. Define además un método '}<em>contarAciertos()</em>{' que recibe como parámetros seis valores de la combinación ganadora y devuelve el número de aciertos.'}</p>
+export const statement = <p><b>2.&ensp;</b>{'Crea un tipo de objeto '}<em>ApuestaPrimitiva</em>{' provisto de seis propiedades que representan los valores de una primitiva: v1, v2, v3, v4, v5. Define además un método '}<em>contarAciertos()</em>{' que recibe como parámetros seis valores de la combinación ganadora y devuelve el número de aciertos.'}</p>
 
 const initialHTML = `
     <form id="second-form" class="mb-4 rounded p-2 p-sm-4 bg-light">

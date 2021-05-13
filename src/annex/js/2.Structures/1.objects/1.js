@@ -1,7 +1,7 @@
 
 
 export const statement = <>
-    <p><b>1.</b>{'Sea un tipo de objeto '}<em>Usuario</em>{' provisto de dos propiedades: '}<em>usuario</em>&nbsp;y&nbsp;<em>clave</em>{' que define además un método '}<em>comprobarClave()</em>{' que recibe dos parámetros (usuario y clave) y devuelve un valor cierto si ambos coinciden con el nombre del usuario y su contraseña:'}</p>
+    <p><b>1.&ensp;</b>{'Sea un tipo de objeto '}<em>Usuario</em>{' provisto de dos propiedades: '}<em>usuario</em>&nbsp;y&nbsp;<em>clave</em>{' que define además un método '}<em>comprobarClave()</em>{' que recibe dos parámetros (usuario y clave) y devuelve un valor cierto si ambos coinciden con el nombre del usuario y su contraseña:'}</p>
     <pre>
 {`function Usuario(_usuario, _clave) {
     this.usuario = _usuario;
