@@ -26,7 +26,7 @@ export default ({code, mode, onChange}) => {
 
     return(
         <>
-        <Button variant="primary" onClick={() => setShow(prev => !prev)}>Mostrar editor {mode}</Button>
+        <Button variant="dark" onClick={() => setShow(prev => !prev)}>Editor {mode}</Button>
         <Modal show={show} onHide={() => setShow(() => false)} dialogClassName="code-view-c mw-100">
             <Modal.Header closeButton>
                 <Modal.Title>C&oacute;digo {mode}</Modal.Title>

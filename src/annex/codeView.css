@@ -1,6 +1,9 @@
 .CodeMirror {
     height: 65vh;
 }
+.CodeMirror * {
+    font-size: 12px;
+}
 
 @media screen and (max-width: 600px) {
     .code-view-c {
