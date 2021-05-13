@@ -1,9 +1,9 @@
 import {useEffect, useState, useRef} from 'react'
 import CodeView from './codeView'
 
-export default ({initialHTML, initialJs}) => {
+export default ({initialHTML, initialJS}) => {
     const [html, setHTML] = useState(initialHTML)
-    const [js, setJS] = useState(initialJs)
+    const [js, setJS] = useState(initialJS)
     const htmlFrame = useRef(null)
     useEffect(() => {
         const myScript = document.createElement('script')

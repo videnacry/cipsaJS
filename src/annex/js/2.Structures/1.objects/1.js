@@ -17,7 +17,7 @@ export const statement = <>
         <p>{'Crea una página que cree a su vez un objeto '}<em>Usuario</em>{' con nombre '}<em>"roger"</em>{' y clave: '}<em>1234.</em>{' La página debe solicitar entonces un nombre de usuario y una contraseña y comprobar si son correctos empleando el método '}<em>comprobarUsuario()</em>{' del objeto usuario. Si el usuario se identifica correctamente debe mostrársele un mensaje de bienvenida. En caso contrario debe mostrársele un mensaje de error y volvérsele a solicitar el usuario y la contraseña.'}</p>
 </>
 
-const initialJs = `
+const initialJS = `
 const User = (name, password) => { return {
     name,
     password,
@@ -89,5 +89,5 @@ const initialHTML = `
 `
 
 export default ({CodeFrame}) => {
-    return <CodeFrame initialHTML={initialHTML} initialJs={initialJs}/>
+    return <CodeFrame initialHTML={initialHTML} initialJS={initialJS}/>
 }
