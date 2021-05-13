@@ -6,12 +6,12 @@ export const objects = {
 }
 
 const exercises = [First]
-const Objects = ({CodeView}) => 
+const Objects = ({CodeFrame}) => 
     exercises.map(Exercise => (
         <div className="rounded p-2 p-sm-4 bg-secondary">
             <Alert variant="info">{Exercise.statement}</Alert>
             <br/>
-            <Exercise.default CodeView={CodeView}/>
+            <Exercise.default CodeFrame={CodeFrame}/>
         </div>
     ))
 

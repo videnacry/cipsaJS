@@ -21,7 +21,7 @@ const Annex = memo(() => {
     const render = useCallback(() => {
         if (annex) {
             const Dir = annexes[annex]
-            return <Dir Folder={Folder} CodeView={CodeView}/>
+            return <Dir Folder={Folder}/>
         }
         return(
             <Folder files={annex}/>

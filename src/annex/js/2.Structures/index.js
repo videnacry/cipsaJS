@@ -1,6 +1,7 @@
 import {memo} from 'react'
 import {useSelector} from 'react-redux'
 import {selectTopic} from '../../../features/directory/slice'
+import CodeFrame from '../../codeFrame'
 import Objects, {objects} from './1.objects'
 
 export const structures = {
@@ -19,7 +20,7 @@ const Structures = memo(({Folder, CodeView}) => {
 
     if (topic) {
         const Topic = topics[topic]
-        return <Topic CodeView={CodeView}/>
+        return <Topic CodeFrame={CodeFrame}/>
     }
     return <Folder files={structures}/>
 })

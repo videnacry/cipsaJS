@@ -22,7 +22,7 @@ const Js = memo(({Folder, CodeView}) => {
     const render = useCallback(() => {
         if (module) {
             const Module =  modules[module]
-            return <Module Folder={Folder} CodeView={CodeView}/>
+            return <Module Folder={Folder}/>
         }
         return(
             <Folder files={js}/>

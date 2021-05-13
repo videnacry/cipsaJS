@@ -1,5 +1,4 @@
-import {useEffect, useState, useRef} from 'react'
-import {Modal} from 'react-bootstrap'
+
 
 export const statement = <>
     <p><b>1.</b>{'Sea un tipo de objeto '}<em>Usuario</em>{' provisto de dos propiedades: '}<em>usuario</em>&nbsp;y&nbsp;<em>clave</em>{' que define además un método '}<em>comprobarClave()</em>{' que recibe dos parámetros (usuario y clave) y devuelve un valor cierto si ambos coinciden con el nombre del usuario y su contraseña:'}</p>
@@ -31,14 +30,14 @@ const User = (name, password) => { return {
 const user = User('roger', '1234')
 const userInput = document.querySelector('#first-username')
 const passwordInput = document.querySelector('#first-password')
-const alert = document.querySelector('#first-alert')
+const alertElmt = document.querySelector('#first-alert')
 const message = document.querySelector('#first-message')
 
 const actions = {
     showMessage: () => message.classList.remove('d-none'),
     hideMessage: () => message.classList.add('d-none'),
-    showAlert: () => alert.classList.remove('d-none'),
-    hideAlert: () => alert.classList.add('d-none'),
+    showAlert: () => alertElmt.classList.remove('d-none'),
+    hideAlert: () => alertElmt.classList.add('d-none'),
     isValid: () => user.isValid(userInput.value, passwordInput.value)
 }
 
@@ -89,33 +88,6 @@ const initialHTML = `
 </div>
 `
 
-export default ({CodeView}) => {
-    const [html, setHTML] = useState(initialHTML)
-    const [js, setJS] = useState(initialJs)
-    const htmlFrame = useRef(null)
-    useEffect(() => {
-        const myScript = document.createElement('script')
-        htmlFrame.current.innerHTML = html
-        myScript.textContent = 'try{Function(`' + js + '`)()} catch(e){console.log(e)}'
-        htmlFrame.current.append(myScript)
-    }, [html, js])
-    const User = (name, password) => { return {
-        name,
-        password,
-        isValid(_name, _password) {
-            if (this.name === _name && this.password === _password)
-                return true
-            return false
-        }
-    }}
-    const user = User('roger', '1234')
-    return(
-        <>
-        <div ref={htmlFrame}></div>
-        <div class="btn-group btn-group-sm d-flex">
-            <CodeView code={html} mode="htmlmixed" onChange={htmlText => setHTML(() => htmlText)}/>
-            <CodeView code={js} mode="javascript" onChange={jsText => setJS(() => jsText)}/>
-        </div>
-        </>
-    )
+export default ({CodeFrame}) => {
+    return <CodeFrame initialHTML={initialHTML} initialJs={initialJs}/>
 }
