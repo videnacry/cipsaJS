@@ -33,7 +33,7 @@ const initialHTML = `
 <div id="third-toast" class="toast show m-auto d-none">
     <div class="toast-header">
         <strong class="mr-auto">Mensaje</strong>
-        <small>Like &#x2661</small>
+        <small>Like &#x2661;</small>
         <button id="third-close" class="btn close ml-2 mb-1"><span>&times;</span></button>
     </div>
     <div class="toast-body">
@@ -98,7 +98,6 @@ elements.numbers.forEach(num => {
         actions.hideMessage()
         let validInputs = true
         for (let idx = 0; elements.numbers.length > idx; idx++) {
-            console.log(idx)
             if (!isNum(elements.numbers[idx].value)) {
                 validInputs = false
                 break

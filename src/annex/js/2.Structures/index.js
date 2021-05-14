@@ -3,16 +3,19 @@ import {useSelector} from 'react-redux'
 import {selectTopic} from '../../../features/directory/slice'
 import CodeFrame from '../../codeFrame'
 import Objects, {objects} from './1.objects'
+import Vector, {vector} from './2.vector'
 
 export const structures = {
     name: 'structures',
     parent: 'javascript',
     children: {
-        objects
+        objects,
+        vector
     }
 }
 const topics = {
-    objects: Objects
+    objects: Objects,
+    vector: Vector
 }
 
 const Structures = memo(({Folder, CodeView}) => {
