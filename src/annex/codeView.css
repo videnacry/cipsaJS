@@ -1,5 +1,8 @@
 .CodeMirror {
-    height: 65vh;
+    height: unset;
+}
+.CodeMirror-vscrollbar {
+    display: none;
 }
 .CodeMirror * {
     font-size: 12px;
