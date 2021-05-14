@@ -94,7 +94,7 @@ elements.form.onsubmit = e => {
     actions.showMessage()
 }
 elements.numbers.forEach(num => {
-    num.onchange = ({currentTarget: {value, classList}}) => {
+    num.oninput = ({currentTarget: {value, classList}}) => {
         actions.hideMessage()
         let validInputs = true
         for (let idx = 0; elements.numbers.length > idx; idx++) {

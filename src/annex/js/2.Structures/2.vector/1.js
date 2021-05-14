@@ -113,13 +113,14 @@ const actions = {
         alphabeticMembers.forEach((member, idx) => {
             html += '<tr><td>' + members[idx] + '</td><td>' + member + '</td></tr>'
         })
+        html += '<tbody><tr><td colspan="2">El n&uacute;mero de socios es: ' + members.length + '</td></tr></tbody>'
         elements.tbody.innerHTML = html
         members.length = 0
         elements.submit.disabled = true
     }
 }
 const members = []
-elements.input.onchange = ({currentTarget: {classList, value}}) => {
+elements.input.oninput = ({currentTarget: {classList, value}}) => {
     actions.hideToast()
     if (value.length > 0) {
         actions.hideAlert()

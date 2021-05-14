@@ -137,7 +137,7 @@ const isNum = (num) =>
     (num === "" || num === null || typeof num === 'boolean' || isNaN(num)) ? false : true
 
 elements.numbers.forEach(elmt => {
-    elmt.onchange = ({currentTarget: {value, classList}}) => {
+    elmt.oninput = ({currentTarget: {value, classList}}) => {
         actions.hideHits()
         let validNumbers = true
         for (let idx in valuesInput) {
