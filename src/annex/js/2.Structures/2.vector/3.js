@@ -130,8 +130,8 @@ const actions = {
         dropdown.classList.remove('is-valid')
         elements.dropdownSelected.value = ''
         elements.dropdownSelected.textContent = 'Mes del año'
-        state.validMonth = false
-        state.validLiters = false
+        elements.submit.disabled = true
+        actions.resetState()
     },
     toggleModal() {
         elements.modal.classList.toggle('d-block')
