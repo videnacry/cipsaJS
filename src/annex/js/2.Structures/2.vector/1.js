@@ -1,8 +1,8 @@
-export const statement = <ol class="list-unstyled">
+export const statement = <ol className="list-unstyled">
     <b>1.&ensp;</b>Crea una p&aacute;gina que solicite el nombre de los socios de una peña. Para ello, la p&aacute;gina solicitar&aacute; cada nombre y a continuaci&oacute;n mostrar&aaute; un cuadro de di&aacute;logo preguntando si se desea continuar. Una vez que el usuario haya finalizado de introducir todos los nombres la p&aacute;gina debe mostrar los siguientes datos:
-    <li class="ml-4">a.&ensp;Una tabla con los nombres de los socios en el orden en que se han introducido</li>
-    <li class="ml-4">b.&ensp;Una tabla con los nombres de los socios ordenados alfab&eacute;ticamente.</li>
-    <li class="ml-4">c.&ensp;El total de socios introducidos.</li>
+    <li className="ml-4">a.&ensp;Una tabla con los nombres de los socios en el orden en que se han introducido</li>
+    <li className="ml-4">b.&ensp;Una tabla con los nombres de los socios ordenados alfab&eacute;ticamente.</li>
+    <li className="ml-4">c.&ensp;El total de socios introducidos.</li>
 </ol>
 
 const initialHTML = `

@@ -1,5 +1,5 @@
-export const statement = <ol class="list-unstyled">
-    <b>3.&ensp;</b>{'Crea un tipo de objeto '}<en>Tri&aacute;ngulo</en>{' provisto de tres propiedades: '}<em>lado1, lado2&nbsp;</em>y<em>&nbsp;lado3.</em>&nbsp;Define adem&aacute;s tres m&eacute;todos:
+export const statement = <ol className="list-unstyled">
+    <b>3.&ensp;</b>{'Crea un tipo de objeto '}<em>Tri&aacute;ngulo</em>{' provisto de tres propiedades: '}<em>lado1, lado2&nbsp;</em>y<em>&nbsp;lado3.</em>&nbsp;Define adem&aacute;s tres m&eacute;todos:
     <li>&emsp;a.&ensp;<em>esEquilatero() ⟶&nbsp;</em>{'devuelve un valor cierto si todos los lados son iguales.'}</li>
     <li>&emsp;b.&ensp;<em>esIsosceles() ⟶&nbsp;</em>{'devuelve un valor cierto si dos de los lados son iguales.'}</li>
     <li>&emsp;c.&ensp;<em>esEscaleno() ⟶&nbsp;</em>{'devuelve un valor cierto si todos los lados son distintos.'}</li>

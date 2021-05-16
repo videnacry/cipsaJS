@@ -24,7 +24,7 @@ export default ({initialHTML, initialJS}) => {
     return(
         <>
         <div ref={htmlFrame}></div>
-        <div class="btn-group btn-group-sm d-flex">
+        <div className="btn-group btn-group-sm d-flex">
             <CodeView code={html} mode="htmlmixed" onChange={htmlText => setHTML(() => htmlText)}/>
             <CodeView code={js} mode="javascript" onChange={jsText => setJS(() => jsText)}/>
         </div>
