@@ -4,12 +4,10 @@ import folderSVG from './folder.svg'
 
 const render = files => {
     return Object.values(files.children).map(file => 
-        // <Col xs="6" sm="4" md="3">
-            <Button variant="outline-primary">
-                <img src={folderSVG} alt="folder img" width="100px"/>
-                <h6>{file.name}</h6>
-            </Button>
-        // </Col>
+        <Button variant="outline-primary">
+            <img src={folderSVG} alt="folder img" width="100px"/>
+            <h6>{file.name}</h6>
+        </Button>
     )
 }
 const Folder = memo(({files}) => {

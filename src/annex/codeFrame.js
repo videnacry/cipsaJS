@@ -11,16 +11,6 @@ export default ({initialHTML, initialJS}) => {
         htmlFrame.current.innerHTML = html
         htmlFrame.current.append(myScript)
     }, [html, js])
-    const User = (name, password) => { return {
-        name,
-        password,
-        isValid(_name, _password) {
-            if (this.name === _name && this.password === _password)
-                return true
-            return false
-        }
-    }}
-    const user = User('roger', '1234')
     return(
         <>
         <div ref={htmlFrame}></div>

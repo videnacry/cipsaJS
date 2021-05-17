@@ -18,7 +18,7 @@ const topics = {
     vector: Vector
 }
 
-const Structures = memo(({Folder, CodeView}) => {
+const Structures = memo(({Folder}) => {
     const topic = useSelector(selectTopic)
 
     if (topic) {

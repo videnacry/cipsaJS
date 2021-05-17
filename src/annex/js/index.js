@@ -17,7 +17,7 @@ const modules = {
     structures: Structures
 }
 
-const Js = memo(({Folder, CodeView}) => {
+const Js = memo(({Folder}) => {
     const module = useSelector(selectModule)
     const render = useCallback(() => {
         if (module) {

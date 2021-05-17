@@ -66,7 +66,7 @@ const Nav = () => {
         <Navbar collapseOnSelect expand="lg">
             <Navbar.Toggle aria-controls="responsive-navbar-nav" className="bg-danger"/>
             <Navbar.Collapse id="responsive-navbar-nav">
-                <Navbar>
+                <Navbar className="d-block">
                     {getDirectoryAsDL(annex)}
                 </Navbar>
             </Navbar.Collapse>
