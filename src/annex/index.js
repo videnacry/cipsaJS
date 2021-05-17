@@ -2,18 +2,20 @@ import {memo, useCallback} from 'react'
 import {useSelector} from 'react-redux'
 import {selectAnnex} from '../features/directory/slice'
 import Js, {js} from './js'
+import Jquery, {jquery} from './jquery'
 import Folder from './folder'
-import CodeView from './codeView'
 
 export const annex = {
     name: 'annex',
     children: {
-        js
+        js,
+        jquery
     }
 }
 
 const annexes = {
-    js: Js
+    js: Js,
+    jquery: Jquery
 }
 
 const Annex = memo(() => {
