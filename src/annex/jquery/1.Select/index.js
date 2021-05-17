@@ -28,5 +28,5 @@ export default ({CodeIframe}) =>
 
 <div className="mb-4 rounded p-2 p-sm-4 bg-light">
     <Alert variant="info">{statement}</Alert>
-    <CodeIframe initialHTML={initialHTML} initialJS={initialJS}/>
+    <CodeIframe name="select" initialHTML={initialHTML} initialJS={initialJS}/>
 </div>

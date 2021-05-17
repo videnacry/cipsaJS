@@ -1,13 +1,13 @@
 import {useEffect, useState, useRef} from 'react'
 import CodeView from './codeView'
 
-export default ({initialHTML, initialJS}) => {
+export default ({initialHTML, initialJS, name}) => {
     const [html, setHTML] = useState(initialHTML)
     const [js, setJS] = useState(initialJS)
     const htmlFrame = useRef(null)
     const htmlIframe = useRef(null)
     useEffect(() => {
-        htmlIframe.current = window.open('', 'jquery')
+        htmlIframe.current = window.open('', name)
     })
     useEffect(() => {
         const myScript = document.createElement('script')
@@ -17,7 +17,7 @@ export default ({initialHTML, initialJS}) => {
     }, [html, js])
     return(
         <>
-        <iframe name="jquery" ref={htmlFrame} width="100%" style={{height: '60vh'}}></iframe>
+        <iframe name={name} ref={htmlFrame} width="100%" style={{height: '60vh'}}></iframe>
         <div className="btn-group btn-group-sm d-flex">
             <CodeView code={html} mode="htmlmixed" onChange={htmlText => setHTML(() => htmlText)}/>
             <CodeView code={js} mode="javascript" onChange={jsText => setJS(() => jsText)}/>
