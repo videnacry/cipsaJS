@@ -30,27 +30,35 @@ const initialJS = `
 import('https://code.jquery.com/jquery-3.6.0.slim.min.js').then(() => {
     $('a').click(e => e.preventDefault())
     const secondImg = $('#second-img')
+    function moveUp() {
+        secondImg.offset((idx, value) => {
+            return {top: value.top - 1, left: value.left}
+        })
+    }
+    function moveLeft() {
+        secondImg.offset((idx, value) => {
+            return {top: value.top, left: value.left - 1}
+        })
+    }
+    function moveDown() {
+        secondImg.offset((idx, value) => {
+            return {top: value.top + 1, left: value.left}
+        })
+    }
+    function moveRight() {
+        secondImg.offset((idx, value) => {
+            return {top: value.top, left: value.left + 1}
+        })
+    }
     $('#second-move li').click(function() {
         switch($(this).data('direction')) {
-            case 'up':
-                secondImg.offset((idx, value) => {
-                    return {top: value.top - 1, left: value.left}
-                })
+            case 'up': moveUp()
                 break
-            case 'left':
-                secondImg.offset((idx, value) => {
-                    return {top: value.top, left: value.left - 1}
-                })
+            case 'left': moveLeft()
                 break
-            case 'down':
-                secondImg.offset((idx, value) => {
-                    return {top: value.top + 1, left: value.left}
-                })
+            case 'down': moveDown()
                 break
-            default :
-                secondImg.offset((idx, value) => {
-                    return {top: value.top, left: value.left + 1}
-                })
+            default : moveRight()
                 break
         }
     })
