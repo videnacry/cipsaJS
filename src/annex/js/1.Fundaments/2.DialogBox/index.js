@@ -1,5 +1,5 @@
 import {memo, useReducer, useState, useCallback, useRef} from 'react'
-import {Card, Form, ListGroup, Col, Row, Image, Modal, Button} from 'react-bootstrap'
+import {Card, Form, ListGroup, Col, Row, Image, Modal, Alert, Button} from 'react-bootstrap'
 import bananaImg from './banana.svg'
 import orangeImg from './naranja.svg'
 import appleImg from './manzana.svg'
@@ -8,6 +8,23 @@ export const dialogBox = {
     name: 'dialogBox',
     parent: 'fundaments'
 }
+
+const statement = <Alert variant="info" className="mb-4 rounded p-2 p-sm-4">
+    <p>Crea un c&oacute;digo Javascript con las sentencias necesarias para realizar las siguientes operaciones:</p>
+    <ol>
+        <li>Declara una variable <em>precio_manzana</em> con el valor 2</li>
+        <li>Se solicita al usuario los kilos de manzanas comprados almacenando el valor en la variable <em>kilos_manzanas.</em></li>
+        <li>Declara una variable <em>precio_naranja</em> con el valor 2.5</li>
+        <li>Se solicita al usuario los kilos de manzanas comprados almacenando el valor en la variable <em>kilos_naranjas.</em></li>
+        <li>Declara una variable <em>precio_platano</em> con el valor 1.75</li>
+        <li>Se solicita al usuario los kilos de manzanas comprados almacenando el valor en la variable <em>kilos_platanos.</em></li>
+        <li>Incrementa la variable compra con el producto de las variables <em>precio_naranja</em> y <em>kilos_naranjas.</em></li>
+        <li>Incrementa la variable compra con el producto de las variables <em>precio_platano</em> y <em>kilos_platanos.</em></li>
+        <li>Declara una variable <em>oferta</em> cuto valor sea 0.08</li>
+        <li>Modifica el valor de la variable <em>compra</em> rest&aacute;ndole el valor de la variable <em>descuento.</em></li>
+        <li>Muestra el valor de las variable <em>compra</em> con el mensaje <em>"El precio de su compra es: &lt;valor_compra&gt;Euros".</em></li>
+    </ol>
+</Alert>
 
 const cart = {
     apple: {
@@ -50,6 +67,7 @@ const DialogBox = memo(() => {
     
     return(
         <>
+        {statement}
         {updatePriceSum()}
         <ListGroup>
             {Object.values(cartState).map(fruit => (

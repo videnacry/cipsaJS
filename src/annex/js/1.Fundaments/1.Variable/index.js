@@ -1,16 +1,21 @@
 import {useState, memo} from 'react'
 import Form from 'react-bootstrap/Form'
-import {Accordion, Card, Button, Col} from 'react-bootstrap'
+import {Accordion, Card, Button, Col, Alert} from 'react-bootstrap'
 
 export const variable = {
     name: 'variable',
     parent: 'fundaments'
 }
+const statement = <Alert variant="info" className="mb-4 rounded p-2 p-sm-4">
+    <p>Haz que la p&aacute;gina muestre una l&iacute;nea indicando la edad que tendr&aacute; el usuario el a&ntilde;o pr&oacute;ximo.</p>
+</Alert>
 
 const Variable = memo(() => {
     const [age, setAge] = useState(0)
 
     return(
+        <>
+        {statement}
         <Form onSubmit={(e => e.preventDefault())} className="bg-light p-4 rounded">
             <Form.Row>
                 <Form.Group as={Col}>
@@ -40,6 +45,7 @@ const Variable = memo(() => {
                 </Form.Group>
             </Form.Row>
         </Form>
+        </>
     )
 })
 
