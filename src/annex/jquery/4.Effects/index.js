@@ -3,7 +3,8 @@ import * as Second from './2'
 import * as Third from './3'
 
 export const effects = {
-    name: 'effects'
+    name: 'effects',
+    type: 'module'
 }
 const exercises = [First, Second, Third]
 

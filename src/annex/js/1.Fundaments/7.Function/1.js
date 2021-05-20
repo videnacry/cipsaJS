@@ -7,7 +7,6 @@ const getResultMessage = ({num}) => <Alert variant="success text-align-center">
         {`Es par = ${num % 2 === 0 ? 'true' : 'false'}`}
     </Alert>
 const getStateAfterValidateNum = (state, num) => {
-    console.log(num)
     if (num === '' || num === null || typeof num === 'boolean' || isNaN(num)) {
         return {...state, num, showAlert: true, disabledSubmit: true, showResult: false}
     }

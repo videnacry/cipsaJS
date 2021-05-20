@@ -4,7 +4,8 @@ import * as Second from './2'
 import * as Third from './3'
 
 export const vector = {
-    name: "vector"
+    name: "vector",
+    type: 'topic'
 }
 const exercises = [First, Second, Third]
 export default ({CodeFrame}) =>  exercises.map(Exercise => 

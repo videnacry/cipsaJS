@@ -7,6 +7,7 @@ import Vector, {vector} from './2.vector'
 
 export const structures = {
     name: 'structures',
+    type: 'module',
     parent: 'javascript',
     children: {
         objects,
@@ -25,7 +26,7 @@ const Structures = memo(({Folder}) => {
         const Topic = topics[topic]
         return <Topic CodeFrame={CodeFrame}/>
     }
-    return <Folder files={structures}/>
+    return <Folder folder={structures}/>
 })
 
 export default Structures

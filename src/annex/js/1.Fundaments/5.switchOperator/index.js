@@ -5,7 +5,7 @@ import * as Second from './2'
 
 export const switchOperator = {
     name: 'switchOperator',
-    parent: 'fundaments'
+    type: 'topic'
 }
 
 const exercises = [First, Second]

@@ -2,7 +2,8 @@ import Alert from 'react-bootstrap/Alert'
 import * as Navigation from './1.navigation'
 import * as Manipulation from './2.manipulation'
 export const dom = {
-    name: 'dom'
+    name: 'dom',
+    type: 'module'
 }
 
 const exercises = [Navigation, Manipulation]

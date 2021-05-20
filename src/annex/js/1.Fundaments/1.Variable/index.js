@@ -4,7 +4,7 @@ import {Accordion, Card, Button, Col, Alert} from 'react-bootstrap'
 
 export const variable = {
     name: 'variable',
-    parent: 'fundaments'
+    type: 'topic'
 }
 const statement = <Alert variant="info" className="mb-4 rounded p-2 p-sm-4">
     <p>Haz que la p&aacute;gina muestre una l&iacute;nea indicando la edad que tendr&aacute; el usuario el a&ntilde;o pr&oacute;ximo.</p>

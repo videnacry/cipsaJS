@@ -1,6 +1,7 @@
 
 export const ui = {
-    name: 'ui'
+    name: 'ui',
+    type:'module'
 }
 
 const statement = <>

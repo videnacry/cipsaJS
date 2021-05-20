@@ -7,7 +7,7 @@ import * as Fourth from './4'
 
 export const loop = {
     name: 'loop',
-    parent: 'fundaments'
+    type: 'topic'
 }
 
 const exercises = [First, Second, Third, Fourth]

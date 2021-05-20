@@ -11,6 +11,7 @@ import UI, {ui} from './6.UI'
 
 export const jquery = {
     name: 'jquery',
+    type: 'annex',
     children: {select, dom, events, effects, forms, ui}
 }
 
@@ -26,7 +27,7 @@ const modules = {
 export default ({Folder}) => {
     const module = useSelector(selectModule)
 
-    if (!module) return <Folder files={jquery}/>
+    if (!module) return <Folder folder={jquery}/>
     const Module = modules[module]
     return <Module CodeIframe={CodeIframe}/>
 }

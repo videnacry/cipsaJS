@@ -6,6 +6,7 @@ import Structures, {structures} from './2.Structures'
 
 export const js = {
     name: 'js',
+    type: 'annex',
     children: {
         fundaments,
         structures
@@ -25,7 +26,7 @@ const Js = memo(({Folder}) => {
             return <Module Folder={Folder}/>
         }
         return(
-            <Folder files={js}/>
+            <Folder folder={js}/>
         )
     }, [module])
     return(

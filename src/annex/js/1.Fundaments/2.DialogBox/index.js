@@ -6,7 +6,7 @@ import appleImg from './manzana.svg'
 
 export const dialogBox = {
     name: 'dialogBox',
-    parent: 'fundaments'
+    type: 'topic'
 }
 
 const statement = <Alert variant="info" className="mb-4 rounded p-2 p-sm-4">

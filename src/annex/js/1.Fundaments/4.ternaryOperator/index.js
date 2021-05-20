@@ -13,7 +13,7 @@ const exercises = [First, Second, Third, Fourth, Fifth, Sixth, Seventh, Eighth]
 
 export const ternaryOperator = {
     name: 'ternaryOperator',
-    parent: 'fundaments'
+    type: 'topic'
 }
 
 const renderExercise = () => exercises.map(Exercise => (

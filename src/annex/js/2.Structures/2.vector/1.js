@@ -105,7 +105,6 @@ const actions = {
     },
     hideToast: () => elements.toast.classList.add('d-none'),
     showMembers() {
-        console.log(this)
         this.hideModal()
         elements.toast.classList.remove('d-none')
         const alphabeticMembers = [...members].sort()

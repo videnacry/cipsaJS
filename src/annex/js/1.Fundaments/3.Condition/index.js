@@ -7,7 +7,7 @@ const exercises = [First, Second]
 
 export const condition = {
     name: 'condition',
-    parent: 'fundaments'
+    type: 'topic'
 }
 
 const renderExercise = () => exercises.map(Exercise => (

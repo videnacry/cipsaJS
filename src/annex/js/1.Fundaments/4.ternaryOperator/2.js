@@ -21,7 +21,6 @@ const getAffirmation = ({username, password} = credentials, {username: pUsername
         if (password === pPassword) return <span className="text-success">¡Bienvenido Roger.!</span>
         return <span className="text-danger">Contraseña incorrecta</span>
     }
-    console.log(username, pUsername)
     return <span className="text-danger">Usuario incorrecto</span>
 }
 const toastReducer = (state, action) => {

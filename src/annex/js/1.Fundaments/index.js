@@ -12,6 +12,7 @@ import Functions, {functions} from './7.Function'
 
 export const fundaments = {
     name: 'fundaments',
+    type: 'module',
     parent: 'javascript',
     children: {
         variable,
@@ -42,7 +43,7 @@ const Fundaments = memo(({Folder}) => {
             return <Topic Folder={Folder}/>
         }
         return(
-            <Folder files={fundaments}/>
+            <Folder folder={fundaments}/>
         )
     })
     return(

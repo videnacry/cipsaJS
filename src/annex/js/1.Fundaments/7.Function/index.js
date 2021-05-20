@@ -8,7 +8,7 @@ import * as Fifth from './5'
 
 export const functions = {
     name: 'functions',
-    parent: 'fundaments'
+    type: 'topic'
 }
 
 const exercises = [First, Second, Third, Fourth, Fifth]

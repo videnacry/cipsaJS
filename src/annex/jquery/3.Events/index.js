@@ -6,7 +6,8 @@ import * as Fourth from './4'
 import * as Fifth from './5'
 
 export const events = {
-    name: 'events'
+    name: 'events',
+    type: 'module'
 }
 const exercises = [First, Second, Third, Fourth, Fifth]
 

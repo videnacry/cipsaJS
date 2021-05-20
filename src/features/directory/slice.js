@@ -4,8 +4,7 @@ const initialState = {
     Root: 'annex',
     Annex: 'js',
     Module: 'fundaments',
-    Topic: 'dialogBox',
-    path: ['annex', 'js', 'fundaments', 'dialogBox']
+    Topic: 'dialogBox'
 }
 
 export const slice = createSlice({
@@ -17,7 +16,15 @@ export const slice = createSlice({
             state.Annex = Annex
             state.Module = Module
             state.Topic = Topic
-            state.path = [Root, Annex, Module, Topic]
+        },
+        changeAnnex: (state, {payload: Annex}) => {
+            state.Annex = Annex
+        },
+        changeModule: (state, {payload: Module}) => {
+            state.Module = Module
+        },
+        changeTopic: (state, {payload: Topic}) => {
+            state.Topic = Topic
         }
     }
 })
@@ -29,4 +36,4 @@ export const selectTopic = state => state.directory.Topic
 export const selectState = state => state.directory
 
 export default slice.reducer
-export const {changePath} = slice.actions
+export const {changePath, changeModule, changeTopic, changeAnnex} = slice.actions

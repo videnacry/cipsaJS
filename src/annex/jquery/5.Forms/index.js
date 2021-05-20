@@ -4,7 +4,8 @@ import tomatoImg from './tomato.svg'
 import orangeImg from './orange.svg'
 
 export const forms = {
-    name: 'forms'
+    name: 'forms',
+    type: 'module'
 }
 
 const statement = <>
@@ -239,7 +240,6 @@ import('https://code.jquery.com/jquery-3.6.0.slim.min.js').then(() => {
         for (let idx in amount) {
             const price = amount[idx] * prices[idx]
             const discount = amount[idx] > 5 ? (price * discountPercentage)/100 : 0
-            console.log(price, discount, amount, idx)
             totalPrice += price - discount
         }
         $('.modal').addClass('d-block')

@@ -67,7 +67,6 @@ import('https://code.jquery.com/jquery-3.6.0.slim.min.js').then(() => {
     $('a').click(function(e) {
         e.preventDefault()
         $('#' + $(this).data('id')).toggleClass('invisible')
-        console.log($($(this).data('id')))
     })
 })
 `

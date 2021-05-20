@@ -4,7 +4,8 @@ import * as Second from './2'
 import * as Third from './3'
 
 export const objects = {
-    name: 'objects'
+    name: 'objects',
+    type: 'topic'
 }
 
 const exercises = [First, Second, Third]

@@ -1,7 +1,8 @@
 import Alert from 'react-bootstrap/Alert'
 import {html as initialHTML} from '../index.json'
 export const select = {
-    name: 'select'
+    name: 'select',
+    type: 'module'
 }
 const statement = <>
 <p>Partiendo de la p&aacute;gina <em>index.html</em> implementar las siguientes selecciones empleando JQuery:</p>
